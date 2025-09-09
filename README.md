@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# EduTrack Admin Panel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Educational Management System built with React and Node.js
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Modern, responsive admin dashboard
+- User management (Students, Teachers, Parents, Admins)
+- Attendance tracking
+- Leave request management
+- Reports and analytics
+- Beautiful UI with Tailwind CSS
 
-### `npm start`
+## Adding Local Images
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### For Login Background
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Place your image in the public folder:**
+   ```
+   admin-panel/public/images/background.jpg
+   ```
 
-### `npm test`
+2. **Update the Login.jsx file:**
+   ```jsx
+   {/* Option 1: Use a local image from public folder */}
+   <img 
+     src="/images/background.jpg" 
+     alt="Background" 
+     className="w-full h-full object-cover"
+   />
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Alternative: Use CSS background-image:**
+   ```jsx
+   <div 
+     className="absolute inset-0 opacity-10"
+     style={{
+       backgroundImage: 'url(/images/background.jpg)',
+       backgroundSize: 'cover',
+       backgroundPosition: 'center'
+     }}
+   ></div>
+   ```
 
-### `npm run build`
+### Supported Image Formats
+- JPG/JPEG
+- PNG
+- WebP
+- SVG
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Image Optimization Tips
+- Use images under 1MB for better performance
+- Recommended dimensions: 1920x1080 or larger
+- Consider using WebP format for better compression
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+2. Start the development server:
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Open [http://localhost:3001](http://localhost:3001) in your browser
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Color Scheme
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The application uses a consistent color palette:
+- **Primary**: Blue (`blue-500`, `blue-600`)
+- **Success**: Green (`green-500`, `green-600`)
+- **Warning**: Yellow (`yellow-500`, `yellow-600`)
+- **Info**: Purple (`purple-500`, `purple-600`)
+- **Background**: Light gray (`gray-50`)
+- **Text**: Dark gray (`gray-800`, `gray-700`)
+- **Borders**: Medium gray (`gray-200`, `gray-300`)
